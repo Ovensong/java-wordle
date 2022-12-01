@@ -1,0 +1,459 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Random</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Main {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+
+        <span class="s0">int </span><span class="s1">num1 = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">num2 = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">num3 = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">num4 = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">num5 = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">guesses = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s1">String let1 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">String let2 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">String let3 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">String let4 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">String let5 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+
+        <span class="s1">Random random = </span><span class="s0">new </span><span class="s1">Random()</span><span class="s0">;</span>
+        <span class="s1">Scanner in = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Welcome to Wordle, type start to start!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">String input = in.nextLine()</span><span class="s0">;</span>
+
+        <span class="s0">if </span><span class="s1">(input.equals(</span><span class="s3">&quot;start&quot;</span><span class="s1">)) {</span>
+            <span class="s1">num1 = random.nextInt(</span><span class="s2">26</span><span class="s1">) + </span><span class="s2">1</span><span class="s0">;</span>
+            <span class="s1">num2 = random.nextInt(</span><span class="s2">26</span><span class="s1">) + </span><span class="s2">1</span><span class="s0">;</span>
+            <span class="s1">num3 = random.nextInt(</span><span class="s2">26</span><span class="s1">) + </span><span class="s2">1</span><span class="s0">;</span>
+            <span class="s1">num4 = random.nextInt(</span><span class="s2">26</span><span class="s1">) + </span><span class="s2">1</span><span class="s0">;</span>
+            <span class="s1">num5 = random.nextInt(</span><span class="s2">26</span><span class="s1">) + </span><span class="s2">1</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">1</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">2</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;b&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">3</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;c&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">4</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;d&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">5</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;e&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">6</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;f&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">7</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;g&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">8</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;h&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">9</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;i&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">10</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;j&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">11</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;k&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">12</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;l&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">13</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;m&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">14</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;n&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">15</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;o&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">16</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;p&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">17</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;q&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">18</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;r&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">19</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;s&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">20</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;t&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">21</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;u&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">22</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;v&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">23</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;w&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">24</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;x&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">25</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;y&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num1 == </span><span class="s2">26</span><span class="s1">) {</span>
+            <span class="s1">let1 = </span><span class="s3">&quot;z&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">1</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">2</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;b&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">3</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;c&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">4</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;d&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">5</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;e&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">6</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;f&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">7</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;g&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">8</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;h&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">9</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;i&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">10</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;j&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">11</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;k&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">12</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;l&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">13</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;m&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">14</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;n&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">15</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;o&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">16</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;p&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">17</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;q&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">18</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;r&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">19</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;s&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">20</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;t&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">21</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;u&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">22</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;v&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">23</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;w&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">24</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;x&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">25</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;y&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num2 == </span><span class="s2">26</span><span class="s1">) {</span>
+            <span class="s1">let2 = </span><span class="s3">&quot;z&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">1</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">2</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;b&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">3</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;c&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">4</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;d&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">5</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;e&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">6</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;f&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">7</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;g&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">8</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;h&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">9</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;i&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">10</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;j&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">11</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;k&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">12</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;l&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">13</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;m&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">14</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;n&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">15</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;o&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">16</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;p&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">17</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;q&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">18</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;r&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">19</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;s&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">20</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;t&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">21</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;u&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">22</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;v&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">23</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;w&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">24</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;x&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">25</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;y&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num3 == </span><span class="s2">26</span><span class="s1">) {</span>
+            <span class="s1">let3 = </span><span class="s3">&quot;z&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">1</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">2</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;b&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">3</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;c&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">4</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;d&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">5</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;e&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">6</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;f&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">7</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;g&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">8</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;h&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">9</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;i&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">10</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;j&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">11</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;k&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">12</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;l&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">13</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;m&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">14</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;n&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">15</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;o&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">16</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;p&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">17</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;q&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">18</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;r&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">19</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;s&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">20</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;t&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">21</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;u&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">22</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;v&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">23</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;w&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">24</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;x&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">25</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;y&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num4 == </span><span class="s2">26</span><span class="s1">) {</span>
+            <span class="s1">let4 = </span><span class="s3">&quot;z&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">1</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;a&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">2</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;b&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">3</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;c&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">4</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;d&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">5</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;e&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">6</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;f&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">7</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;g&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">8</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;h&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">9</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;i&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">10</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;j&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">11</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;k&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">12</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;l&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">13</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;m&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">14</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;n&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">15</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;o&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">16</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;p&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">17</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;q&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">18</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;r&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">19</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;s&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">20</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;t&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">21</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;u&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">22</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;v&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">23</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;w&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">24</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;x&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">25</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;y&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(num5 == </span><span class="s2">26</span><span class="s1">) {</span>
+            <span class="s1">let5 = </span><span class="s3">&quot;z&quot;</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">String word = let1 + let2 + let3 + let4 + let5</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;The word has been chosen, you may guess now.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">while</span><span class="s1">(!input.equals(word)) {</span>
+            <span class="s1">input = in.nextLine()</span><span class="s0">;</span>
+            <span class="s1">guesses = guesses + </span><span class="s2">1</span><span class="s0">;</span>
+            <span class="s0">if </span><span class="s1">(input.equals(word)) {</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;You guessed the word in &quot; </span><span class="s1">+ guesses + </span><span class="s3">&quot;!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;You guess was wrong, Guess again.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;Guesses: &quot; </span><span class="s1">+ guesses)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
